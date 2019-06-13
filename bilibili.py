@@ -11,12 +11,12 @@ def mdata(rep):
     alls=html.xpath("//*[@class='info']")
     j=1
     for i in alls:
-        xd=dict(name=i.xpath("a/text()")\
-        ,url=i.xpath("a/@href")\
-        ,info=i.xpath("div[@class='bangumi-info']/text()")\
-        ,play=i.xpath("div[@class='detail']/span[1]/text()")\
-        ,mark=i.xpath("div[@class='detail']/span[2]/text()")\
-        ,like=i.xpath("div[@class='detail']/span[3]/text()")\
+        xd=dict(name=i.xpath("a/text()")[0]\
+        ,url=i.xpath("a/@href")[0]\
+        ,info=i.xpath("div[@class='bangumi-info']/text()")[0]\
+        ,play=i.xpath("div[@class='detail']/span[1]/text()")[0]\
+        ,mark=i.xpath("div[@class='detail']/span[2]/text()")[0]\
+        ,like=i.xpath("div[@class='detail']/span[3]/text()")[0]\
         ,num=j )
         # print("近3日排名",j,"剧名",name,"播放量",play,"订阅数",mark,"喜欢人数",like)
         j+=1
